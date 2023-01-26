@@ -4,4 +4,4 @@
 
 layout: home
 ---
-*crickets*
+This is David Herrig's website. There is nothing here yet.

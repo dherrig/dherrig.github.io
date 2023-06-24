@@ -13,24 +13,58 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: David's site
+title: David Herrig
 email: david.herrig@gmail.com
 permalink: /:categories/:title:output_ext
 description: >- # this means to ignore newlines until "baseurl:"
-  David's personal site and blog.
+  David's personal site.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://dherrig.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.davidherrig.com" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: dherrig
 github_username:  dherrig
+github: [metadata]
+repository: "dherrig/dherrig.github.io"
+
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
 
 show_excerpts: true
 google_analytics: UA-121692805-1
+
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+
+include: ["_pages"]
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+footer:
+  links:
+    - label: "Strava"
+      icon: "fab fa-fw fa-strava"
+      url: "https://www.strava.com/athletes/17659050"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/davidherrig"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/dherrig"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/dherrig"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

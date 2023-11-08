@@ -1,7 +1,9 @@
 ---
 title: Home
 permalink: /
+layout: home
+classes: wide
+author_profile: true
 ---
 
-This is David Herrig's website. There is nothing here yet.
 

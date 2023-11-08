@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: David Herrig
-email: david.herrig@gmail.com
-permalink: /:categories/:title:output_ext
+title: "DavidHerrig.com"
+email: david@davidherrig.com
+permalink: /:categories/:title
 description: >- # this means to ignore newlines until "baseurl:"
   David's personal site.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -24,7 +24,19 @@ instagram_username: dherrig
 github_username:  dherrig
 github: [metadata]
 repository: "dherrig/dherrig.github.io"
+breadcrumbs: true  # disabled by default
 
+# site author
+name: "David Herrig"
+author:
+  name: "David Herrig"
+  avatar: "/assets/images/bio-photo.png"
+  bio: "Thanks for visiting my site."
+  #location: "USA"
+  links:
+    - label: "david@davidherrig.com"
+      icon: "fas fa-envelope"
+      url: "mailto:david@davidherrig.com"
 
 # Build settings
 markdown: kramdown
@@ -35,17 +47,11 @@ plugins:
 
 show_excerpts: true
 
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "G-1JQQTM652E"
-    anonymize_ip: true
-
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 
-include: ["_pages"]
+include: ["_pages", _"posts"]
 
 defaults:
   # _pages
@@ -55,6 +61,16 @@ defaults:
     values:
       layout: single
       author_profile: false
+      classes: wide
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      related: true
+      show_date: true
+      classes: wide
 
 footer:
   links:

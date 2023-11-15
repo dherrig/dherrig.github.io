@@ -10,11 +10,6 @@ repos:
       args: [--markdown-linebreak-ext=md]
     - id: check-added-large-files
       args: ['--maxkb=10000']
- - repo: https://github.com/klieret/jekyll-relative-url-check
-   rev: v2.0.2
-   hooks:
-    - id: jekyll-relative-url-check-html
-    - id: jekyll-relative-url-check-markdown
  - repo: https://github.com/adrienverge/yamllint
    rev: v1.33.0
    hooks:

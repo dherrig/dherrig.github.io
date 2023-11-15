@@ -1,0 +1,30 @@
+---
+exclude: '^(CNAME|.*\.webmanifest|Gemfile.lock)$'
+repos:
+ - repo: https://github.com/pre-commit/pre-commit-hooks
+   rev: v4.5.0
+   hooks:
+    - id: check-yaml
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+      args: [--markdown-linebreak-ext=md]
+    - id: check-added-large-files
+      args: ['--maxkb=10000']
+ - repo: https://github.com/klieret/jekyll-relative-url-check
+   rev: v2.0.2
+   hooks:
+    - id: jekyll-relative-url-check-html
+    - id: jekyll-relative-url-check-markdown
+ - repo: https://github.com/adrienverge/yamllint
+   rev: v1.33.0
+   hooks:
+    - id: yamllint
+ - repo: https://github.com/markdownlint/markdownlint
+   rev: v0.12.0
+   hooks:
+    - id: markdownlint
+      args: [-s, .markdownlint.rb]
+ - repo: https://github.com/codespell-project/codespell
+   rev: v2.2.6
+   hooks:
+    - id: codespell
